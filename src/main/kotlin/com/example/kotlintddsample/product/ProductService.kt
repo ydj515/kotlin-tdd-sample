@@ -4,12 +4,9 @@ import org.springframework.stereotype.Service
 
 @Service
 class ProductService(
-
+    private val productRepository: ProductRepository
 ) {
     fun getProducts(): List<Product> {
-        return listOf(
-            Product(1, "Americano", 3000),
-            Product(2, "Latte", 4000)
-        )
+        return productRepository.findAll()
     }
 }
