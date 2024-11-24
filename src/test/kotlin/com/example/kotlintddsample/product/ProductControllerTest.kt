@@ -1,8 +1,5 @@
-package com.example.kotlintddsample
+package com.example.kotlintddsample.product
 
-import com.example.kotlintddsample.product.Product
-import com.example.kotlintddsample.product.ProductController
-import com.example.kotlintddsample.product.ProductService
 import com.ninjasquad.springmockk.MockkBean
 import io.kotest.core.spec.style.DescribeSpec
 import io.mockk.every
