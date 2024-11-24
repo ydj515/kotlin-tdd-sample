@@ -1,7 +1,5 @@
-package com.example.kotlintddsample
+package com.example.kotlintddsample.product
 
-import com.example.kotlintddsample.product.Product
-import com.example.kotlintddsample.product.ProductRepository
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
