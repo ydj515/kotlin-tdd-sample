@@ -1,5 +1,8 @@
 package com.example.kotlintddsample
 
+import com.example.kotlintddsample.product.Product
+import com.example.kotlintddsample.product.ProductController
+import com.example.kotlintddsample.product.ProductService
 import com.ninjasquad.springmockk.MockkBean
 import io.kotest.core.spec.style.DescribeSpec
 import io.mockk.every
@@ -21,12 +24,12 @@ class ProductControllerTest(
         )
     }
 
-    describe("GET /api/coffees") {
+    describe("GET /api/products") {
         it("should return list of coffee menus") {
-            mockMvc.get("/api/product")
+            mockMvc.get("/api/products")
                 .andExpect {
                     status { isOk() }
-                    jsonPath("$[0].menuId") { value(1) }
+                    jsonPath("$[0].id") { value(1) }
                     jsonPath("$[0].name") { value("Americano") }
                     jsonPath("$[0].price") { value(3000) }
                 }
