@@ -25,14 +25,17 @@ class ProductControllerTest(
     }
 
     describe("GET /api/products") {
-        it("should return list of coffee menus") {
-            mockMvc.get("/api/products")
-                .andExpect {
-                    status { isOk() }
-                    jsonPath("$[0].id") { value(1) }
-                    jsonPath("$[0].name") { value("Americano") }
-                    jsonPath("$[0].price") { value(3000) }
-                }
+        context("요청이 전달되면") {
+            it("200응답과 products list를 리턴한다.") {
+                mockMvc.get("/api/products")
+                    .andExpect {
+                        status { isOk() }
+                        jsonPath("$[0].id") { value(1) }
+                        jsonPath("$[0].name") { value("Americano") }
+                        jsonPath("$[0].price") { value(3000) }
+                    }
+            }
         }
+
     }
 })
