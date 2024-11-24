@@ -16,8 +16,8 @@ class ProductControllerTest(
 
     beforeEach {
         every { productService.getProducts() } returns listOf(
-            ProductDto(1, "Americano", 3000),
-            ProductDto(2, "Latte", 4000)
+            Product(1, "Americano", 3000),
+            Product(2, "Latte", 4000)
         )
     }
 
