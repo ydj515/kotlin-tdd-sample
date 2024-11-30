@@ -27,7 +27,7 @@ class OrderControllerTest(
                 // MockK는 객체를 비교할 때 기본적으로 참조 비교를 수행하므로, 두 객체가 다른 메모리 주소를 가지면 실패한다.
                 // Order 객체의 특정 필드 값만 비교하도록 match를 사용합니다.
                 // 이 방법은 객체가 아닌 필드 값에 따라 매칭하기 때문에 객체 생성 방식과 상관없이 일치합니다.
-                every { orderService.createOrder(match { it.id == 1L && it.productId == 1L && it.username == "testUser" }) } returns "주문이 완료되었습니다."
+                every { orderService.createOrder(match { it.productId == 1L && it.username == "testUser" }) } returns "주문이 완료되었습니다."
 
                 mockMvc.post("/api/orders") {
                     contentType = MediaType.APPLICATION_JSON
