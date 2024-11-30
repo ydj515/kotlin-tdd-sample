@@ -21,7 +21,7 @@ class OrderControllerTest(
     describe("POST /api/orders") {
         context("username과 product Id를 요청으로 보냈을 때") {
             it("201 응답과 새 주문이 생성된다.") {
-                val orderRequest = Order(1L, 1L, "testUser")
+                val orderRequest = OrderRequest(1L, "testUser")
 
                 // MockK의 every 설정에서 예상한 Order 객체와 실제 요청에 전달된 Order 객체가 동일해야함.
                 // MockK는 객체를 비교할 때 기본적으로 참조 비교를 수행하므로, 두 객체가 다른 메모리 주소를 가지면 실패한다.
