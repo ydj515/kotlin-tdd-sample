@@ -16,9 +16,9 @@ class Order(
     var user: User,
 
     @Enumerated(EnumType.STRING)
-    val status: OrderStatus = OrderStatus.PAYABLE
+    var status: OrderStatus = OrderStatus.PAYABLE
 )
 
 enum class OrderStatus {
-    PAYABLE, ORDERED
+    PAYABLE, PAID
 }
