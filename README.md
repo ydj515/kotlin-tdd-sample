@@ -1,7 +1,14 @@
 # kotlin-tdd-sample
 TDD로 진행한다. 
 
-1. api endpoint 설계 후 controller test 작성을 시작으로 개발
+## TDD 진행방식
+1. 도메인 설정 후 entity를 작성
+2. 요구사항에 맞게 도메인 로직을 만들고 도메인 테스트 작성
+3. service 코드 & 테스트 작성
+4. repository 코드 & 테스트 작성
+5. controller 코드 & 테스트 작성
+
+## PR
 2. 브랜치는 기능별로 나눔
 3. 기능 개발이 끝나면 main 브랜치에 pr을 보낸 후 merge 
 
